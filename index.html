@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Figli della Sesta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display:ital@1&family=Roboto+Slab:ital@1&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background:
+                linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.45)),
+                url('foto.jpg') center/cover no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        .header-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 6em;
+            color: #fff;
+            margin-bottom: 40px;
+            text-shadow: 0 3px 8px rgba(0,0,0,0.85);
+            letter-spacing: 1px;
+        }
+
+        .footer-text {
+            font-family: 'Roboto Slab', serif;
+            font-style: italic;
+            font-size: 2.3em;
+            color: #fff;
+            margin-top: 60px;
+            text-shadow: 0 3px 7px rgba(0,0,0,0.85);
+            letter-spacing: 0.5px;
+        }
+
+        .player-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 360px;
+            padding: 28px 32px;
+            border-radius: 22px;
+            backdrop-filter: blur(4px);
+            background: rgba(255,255,255,0.13);
+            border: 1px solid rgba(255,255,255,0.35);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+            text-align: center;
+        }
+
+        .player-container h1 {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2em;
+            margin-bottom: 18px;
+            color: #fff;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.7);
+            letter-spacing: 0.5px;
+        }
+
+        audio {
+            width: 100%;
+            border-radius: 12px;
+            outline: none;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 480px) {
+            .header-text {
+                font-size: 2.8em;
+                margin-bottom: 28px;
+            }
+            .footer-text {
+                font-size: 1.6em;
+                margin-top: 28px;
+            }
+            .player-container {
+                width: 85%;
+                min-width: unset;
+                padding: 20px 24px;
+            }
+            .player-container h1 {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header-text">6ª compagnia</div>
+
+    <div class="player-container">
+        <h1>"Figli della Sesta"</h1>
+        <audio controls>
+            <source src="canzone-sesta.mp3" type="audio/mpeg">
+            Il tuo browser non supporta l'elemento audio.
+        </audio>
+    </div>
+
+    <div class="footer-text">24º corso 1ª aliquota</div>
+</body>
+</html>
