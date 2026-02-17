@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figli della Sesta</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="desktop.css">
+  <link rel="stylesheet" href="mobile.css">
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-overlay">
+
+      <!-- CONTENUTO CENTRALE -->
+      <div class="hero-content">
+
+        <!-- TITOLI -->
+        <div class="titles">
+          <h1>"FIGLI DELLA SESTA"</h1>
+          <h2>24° Corso 1ª Aliquota</h2>
+          <h3>"SEI MESI DA LEONI"</h3>
+        </div>
+
+        <!-- AUDIO PLAYER -->
+        <section class="audio-player">
+          <audio id="audio" src="canzone-sesta.mp3"></audio>
+
+          <div class="audio-ui">
+            <button id="playPause">▶</button>
+
+            <div class="progress-container">
+              <div class="progress-bar"></div>
+            </div>
+
+            <span class="time">
+              <span id="currentTime">0:00</span> /
+              <span id="duration">0:00</span>
+            </span>
+          </div>
+        </section>
+
+        <!-- VIDEO -->
+        <div class="video-wrapper">
+          <video id="video" src="video6.mp4" poster="sfocata.jpg"></video>
+          <button class="video-play">▶</button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- PALLINO PER APRIRE IMMAGINE -->
+  <div id="pallino"></div>
+
+  <!-- OVERLAY IMMAGINE -->
+  <div id="overlay">
+    <span id="chiudi">&times;</span>
+    <img src="foto.jpg" alt="Foto">
+  </div>
+
+  <!-- JS -->
+  <script src="audio-player.js" defer></script>
+  <script src="video-player.js" defer></script>
+  <script src="pallino.js" defer></script>
+
+</body>
+</html>

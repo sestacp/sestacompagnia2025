@@ -1,0 +1,138 @@
+@media (max-width: 768px) {
+
+  /* ===============================
+     VARIABILI PER DISTANZE (regolabili)
+     =============================== */
+  :root {
+    --spacing-top-audio: 5vh;
+    --spacing-audio-h1: 0.3vh;
+    --spacing-h1-h2: 45vh;
+    --spacing-h2-h3: 2vh;
+    --spacing-h3-video: -3vh;
+    --spacing-video-bottom: 5vh;
+    --spacing-video-play: 1vh;
+    --gap-blocks: 1vh;
+  }
+
+  /* ===============================
+     SFONDO MOBILE CON FOTO UNICA
+     =============================== */
+  body {
+    background: url('sesta.jpg') center / cover no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ===============================
+     RESET HERO
+     =============================== */
+  .hero {
+    background: none;
+  }
+
+  .hero::before {
+    display: none;
+  }
+
+  /* ===============================
+     HERO-CONTENT
+     =============================== */
+  .hero-content {
+    transform: none;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    gap: var(--gap-blocks);
+    position: relative;
+    z-index: 5;
+    padding-top: var(--spacing-top-audio);
+  }
+
+  /* ===============================
+     ORDINE E DISTANZE TESTI
+     =============================== */
+  .audio-player {
+    order: 1;
+    position: relative;
+    z-index: 5;
+    margin-bottom: var(--spacing-audio-h1);
+  }
+
+  .titles h1 {
+    font-size: 1.9rem;
+    order: 2;
+    position: relative;
+    z-index: 5;
+    margin-bottom: var(--spacing-h1-h2);
+  }
+
+  .titles h2 {
+    font-size: 1.1rem;
+    order: 3;
+    position: relative;
+    z-index: 5;
+    margin-bottom: var(--spacing-h2-h3);
+  }
+
+  .titles h3 {
+    font-size: 1.9rem;
+    order: 4;
+    position: relative;
+    z-index: 5;
+    margin-bottom: var(--spacing-h3-video);
+  }
+
+  .video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    order: 5;
+    position: relative;
+    z-index: 5;
+    margin-bottom: var(--spacing-video-bottom);
+  }
+
+  .video-play {
+    font-size: 3rem;
+    order: 6;
+    z-index: 5;
+    position: relative;
+    margin-bottom: var(--spacing-video-play);
+  }
+
+  /* ===============================
+     PALLINO MOBILE
+     =============================== */
+  #pallino {
+    width: 45px;
+    height: 45px;
+    position: fixed;
+
+    right: 20px;   /* mantiene il pallino a destra */
+    /* right: 10px;  più vicino al bordo */
+    /* right: 40px;  più verso il centro */
+
+    bottom: 360px;  /* 🔧 REGOLA QUI L'ALTEZZA */
+    /* bottom: 80px;  più in alto */
+    /* bottom: 10px;  più in basso */
+
+    /* alternativa responsive */
+    /* bottom: 8vh;  altezza proporzionata allo schermo */
+
+    z-index: 100;
+  }
+
+  /* ===============================
+     FOTO CENTRALE SEPARATA NON SERVE
+     =============================== */
+  .foto-centrale {
+    display: none;
+  }
+
+}
